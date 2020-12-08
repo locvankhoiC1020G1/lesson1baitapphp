@@ -3,14 +3,16 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-$motasanpham = $_POST["motasanpham"];
-$gianiemyetsanpham = $_POST["gianiemyetsanpham"];
-$tilechietkhauphantram = $_POST["tilechietkhauphantram"];
-$tinhchietkhau = 0;
-$giasanphamsaukhichietkhau = 0;
-$tinhchietkhau =  $gianiemyetsanpham * (($tilechietkhauphantram) * 0.1);
-$giasanphamsaukhichietkhau =  $gianiemyetsanpham - $tinhchietkhau;
-echo "giá sản phẩm sau chiết kh ấu" . $tinhchietkhau;
+    $productDescription = $_POST["productDescription"];
+    $listPrice = $_POST["listPrice"];
+    $discountPercent = $_POST["discountPercent"];
+    $discountAmount = $listPrice * ($discountPercent * 0.01);
+    $discountPrice = $listPrice - $discountAmount;
+    echo "mô tả sản phẩm:" . $discountAmount;
+    echo "giá sản phẩm:" . $listPrice;
+    echo "Tỉ lệ chiết khấu %:" . $discountAmount;
+    echo "Lượng chiết khấu:" . $discountAmount;
+    echo "Giá sau khi chiết khấu" . $discountPrice;
 }
 
 ?>

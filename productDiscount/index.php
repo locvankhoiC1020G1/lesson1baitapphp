@@ -8,11 +8,11 @@
 
 <form method="post" action="display_discount.php">
     <label for="a"></label>
-    <input type="text" name="motasanpham" placeholder="nhapmotavaoday" id="a"/> <br>
+    <input type="text" name="productDescription" placeholder="Nhập tên sản phẩm" id="a"/> <br>
     <label for="b"></label>
-    <input type="number" name="gianiemyetsanpham" placeholder="gia" id="b"/> <br>
+    <input type="number" name="listPrice" placeholder="giá" id="b"/> <br>
     <label for="c"></label>
-    <input type="number" name="tilechietkhauphantram" placeholder="chietkhau" id="c"/> <br>
+    <input type="number" name="discountPercent" placeholder="chiết khấu %" id="c"/> <br>
 
     <input type="submit" value="Calculate Discount">
 </form>

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c3b9a42-da0c-4785-86b9-5c72d30dd433" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/futureValueCalculator/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/futureValueCalculator/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productDiscount/display_discount.php" beforeDir="false" afterPath="$PROJECT_DIR$/productDiscount/display_discount.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productDiscount/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/productDiscount/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +38,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607418809660</updated>
-      <workItem from="1607418810853" duration="5070000" />
+      <workItem from="1607418810853" duration="5357000" />
+      <workItem from="1607442696637" duration="2452000" />
     </task>
     <servers />
   </component>
