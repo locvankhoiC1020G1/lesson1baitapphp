@@ -25,9 +25,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $laisuatnam = $_POST["laisuatnam"];
     $sonamdautu = $_POST["sonamdautu"];
     $giatrituonglai = 0;
-    echo $sonamdautu;
     for ($i = 0; $i < $sonamdautu; $i++) {
-        $giatrituonglai = $luongtiendautu + ($luongtiendautu * $laisuatnam);
+        $giatrituonglai = $luongtiendautu + ($luongtiendautu * ($laisuatnam/100));
+        $luongtiendautu = $giatrituonglai;
     }
     echo $giatrituonglai;
 
