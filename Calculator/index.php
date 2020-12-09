@@ -5,7 +5,7 @@
     <title>Bai3</title>
 </head>
 <body>
-<form>
+<form method="get">
 
     <h1>Simple Calculator</h1>
     <fieldset>
@@ -26,7 +26,24 @@
         <input type="submit" id="xacnhan" value="Caculate"/>
     </fieldset>
 </form>
+<?php
+($_SERVER["REQUEST_METHOD"] =="GET") {
+    $a = $_GET["a"];
+    $b = $_GET["b"];
+    $chontoantu = $_GET["chontoantu"];
 
+}
+
+/*$_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $productDescription = $_POST["productDescription"];
+    $listPrice = $_POST["listPrice"];
+    $discountPercent = $_POST["discountPercent"];
+    $discountAmount = $listPrice * ($discountPercent * 0.01);
+    $discountPrice = $listPrice - $discountAmount;*/
+
+
+?>
 
 </body>
 </html>
