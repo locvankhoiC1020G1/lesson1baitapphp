@@ -15,35 +15,51 @@
         <label for="c">Toán tử</label>
 
         <select name="chontoantu" id="c">
-            <option value="tru">+</option>
-            <option value="nhan">-</option>
-            <option value="chia">*</option>
+            <option value="cong">+</option>
+            <option value="tru">-</option>
+            <option value="nhan">*</option>
             <option value="chia">/</option>
         </select>
         <br>
         <label for="so2">First Operation</label>
         <input type="number" name="b" id="so2"/><br>
-        <input type="submit" id="xacnhan" value="Caculate"/>
+        <input type="submit" value="Caculate"/>
     </fieldset>
 </form>
-<?php
-($_SERVER["REQUEST_METHOD"] =="GET") {
-    $a = $_GET["a"];
-    $b = $_GET["b"];
-    $chontoantu = $_GET["chontoantu"];
-
-}
-
-/*$_SERVER["REQUEST_METHOD"] == "POST") {
-
-    $productDescription = $_POST["productDescription"];
-    $listPrice = $_POST["listPrice"];
-    $discountPercent = $_POST["discountPercent"];
-    $discountAmount = $listPrice * ($discountPercent * 0.01);
-    $discountPrice = $listPrice - $discountAmount;*/
-
-
-?>
-
 </body>
 </html>
+
+<?php
+function calc($num1, $chontoantu , $num2)
+{
+switch ($chontoantu) {
+case "cong":
+return $num1 + $num2;
+case "tru":
+return $num1 - $num2;
+case "nhan":
+return $num1 * $num2;
+case "chia":
+return $num1 / $num2;
+
+}
+}
+
+if ($_SERVER['REQUEST_METHOD'] == "GET") {
+$num1 = $_GET['a'];
+$chontoantu = $_GET['chontoantu'];
+$num2 = $_GET['b'];
+
+$result = calc($num1, $chontoantu, $num2);
+
+try {
+$result = calc($num1,$chontoantu,$num2);
+}
+catch (Exception $exception){
+$exception ->getMessage();
+$result = $exception;
+}
+echo $result;
+}
+
+?>
